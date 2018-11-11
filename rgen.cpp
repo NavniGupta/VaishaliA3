@@ -189,7 +189,7 @@ bool CheckPoint ( vector<int> coordinate, int x, int y)
     else
     {
 
-        for (int i = 0; i < coordinate.size(); i = i + 2){
+        for (unsigned int i = 0; i < coordinate.size(); i = i + 2){
             if (x == coordinate[i] && y == coordinate[i+1]){
                 return false;
             }
@@ -274,7 +274,6 @@ int main (int argc, char **argv) {
     std::string svalue, nvalue, lvalue, cvalue;
     unsigned int S_intVal = 10, N_intVal = 5, L_intVal = 5, C_intVal = 20;
     int c;
-    int k;
     int s_num, l_num, x_cord, y_cord;
     unsigned int w_sed;
 
@@ -388,7 +387,7 @@ int main (int argc, char **argv) {
 
         int index = 0;
 
-        for (int mk = 0; mk < street_line_num.size(); mk++)
+        for (unsigned int mk = 0; mk < street_line_num.size(); mk++)
         {
             coordinate.clear();
             int times = 0;
@@ -424,7 +423,7 @@ int main (int argc, char **argv) {
             a_output = string("a \"") + NameofStreet[index] + "\" ";
 
 
-            for (int mk = 0; mk < coordinate.size(); mk = mk+2)
+            for (unsigned int mk = 0; mk < coordinate.size(); mk = mk+2)
             {
                 string a,b;
                 if (coordinate[mk]<0){
